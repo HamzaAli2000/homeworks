@@ -20,11 +20,9 @@ public class Homework1 {
         return ("Array1 and Array2 are " + (areEqual ? "equal" : "not equal"));
     }
 
-    public static ArrayList clonedArrays(int arr1[]) {
-        ArrayList<Integer> clonedArray = new ArrayList<>();
-        for (int i = 0; i < arr1.length; i++) {
-            clonedArray.add(arr1[i]);
-        }
+    public static ArrayList clonedArrays(Integer arr1[]) {
+        ArrayList<Integer> clonedArray = new ArrayList<Integer>(Arrays.asList(arr1));
+
 
         return clonedArray;
     }
@@ -50,7 +48,7 @@ public class Homework1 {
             int[] arr2 = {1, 2, 3, 4, 5};
             System.out.println(equals(arr1, arr2));;
         } else if (choice == 2) {
-            int[] arr1 = {1, 2, 3, 4, 5};
+            Integer[] arr1 = {1, 2, 3, 4, 5};
             System.out.println("Original array: " + Arrays.toString(arr1));
             System.out.println("Modified array: " + clonedArrays(arr1));
         } else if (choice == 3) {
